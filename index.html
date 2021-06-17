@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Lubbas Kicks</title>
+</head>
+<header>
+    <script type="text/x-template" class="shoeTemplate">
+{{#each shoes}}
+<span>{{this}}</span>
+{{/each}}
+</script>
+</header>
+
+<body>
+    <div class="bodyDiv">
+        <div class="headerContainer">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><span><a href="./support.html">Support</a></span></li>
+            </ul>
+            <h1>Lubbas Kicks</h1>
+        </div>
+        <div class="imgScroll">
+            <img src="./img/adidas sneaker.jpg" alt="image of sneaker" class="shoe-image">
+
+        </div>
+        <div class="tempContainer">
+            <p class="shoeContainer">
+
+            </p>
+        </div>
+        <div class="container">
+            <select name="shoes" id="shoes">
+                <option value="choose" selected>Choose your kicks</option>
+                <option value="mike">Mike</option>
+                <option value="hadidas">Hadidas</option>
+                <option value="treebok">Treebok</option>
+                <option value="balance">Old Balance</option>
+            </select>
+            <button class="btn1">Search</button>
+        </div>
+    </div>
+    <script src="./sandboxFactory.js"></script>
+    <script src="./sandbox2.js"></script>
+</body>
+
+</html>
