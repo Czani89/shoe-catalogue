@@ -42,14 +42,14 @@ function catalogue() {
         return shoeProp;
     }
 
-    function shoeCheck(brand) {
-        let lowerBrand = brand.toLowerCase()
-        if (shoes[lowerBrand] === undefined) {
-            shoes[lowerBrand] = 1;
-        } else {
-            shoe[lowerBrand]++;
-        }
-    }
+    // function shoeCheck(brand) {
+    //     let lowerBrand = brand.toLowerCase()
+    //     if (shoes[lowerBrand] === undefined) {
+    //         shoes[lowerBrand] = 1;
+    //     } else {
+    //         shoe[lowerBrand]++;
+    //     }
+    // }
     return {
         getShoe,
         shoeProp,
