@@ -2,14 +2,28 @@ function catalogue() {
     var shoes = [
         {
             color: 'blue',
-            brand: "Mike",
+            brand: "mike",
             size: 8,
             in_stock: 5,
             img: "./img/nike sneaker.jpg"
         },
         {
+            color: 'brown',
+            brand: "mike",
+            size: 6,
+            in_stock: 5,
+            img: "./img/nike sneaker.jpg"
+        },
+        {
+            color: 'white',
+            brand: "mike",
+            size: 7,
+            in_stock: 5,
+            img: "./img/nike sneaker.jpg"
+        },
+        {
             color: 'orange',
-            brand: "Hadidas",
+            brand: "hadidas",
             size: 9,
             in_stock: 5,
             img: "./img/adidas sneaker.jpg"
@@ -17,25 +31,36 @@ function catalogue() {
         ,
         {
             color: 'orange',
-            brand: "Treeboks",
+            brand: "treeboks",
             size: 7,
             in_stock: 10,
             img: "./img/reebok sneaker.jpg"
         },
         {
             color: 'orange',
-            brand: "Old Balance",
+            brand: "balance",
             size: 10,
             in_stock: 4,
             img: "./img/new_balance_sneaker.jpeg"
         }
     ];
     let shoeObj = {};
+    function myShoe(brand, size, color){
+        for(let i =0; i < shoes.length; i++){
+            if(brand === shoes[brand] && size == shoes[size] && color===shoes[color]){
 
-    function getShoe(index) {
-        shoeObj = shoes[index];
-        return shoeObj;
+            }
+        }
     }
+
+    // function getShoe(index) {
+    //     shoeObj = shoes.filter(shoe){
+
+    //     };
+
+    //     console.log(shoeObj);
+    //     return shoeObj;
+    // }
 
     function shoeProp(prop) {
         let shoeProp = shoeObj[prop];
@@ -51,7 +76,7 @@ function catalogue() {
     //     }
     // }
     return {
-        getShoe,
+        // getShoe,
         shoeProp,
         shoes,
     }
