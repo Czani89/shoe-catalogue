@@ -31,7 +31,7 @@ function catalogue() {
         ,
         {
             color: 'orange',
-            brand: "treeboks",
+            brand: "treebok",
             size: 7,
             in_stock: 10,
             img: "./img/reebok sneaker.jpg"
@@ -45,14 +45,28 @@ function catalogue() {
         }
     ];
     let shoeObj = {};
-    function myShoe(brand, size, color){
-        for(let i =0; i < shoes.length; i++){
-            if(brand === shoes[brand] && size == shoes[size] && color===shoes[color]){
+    let shoeSize = "";
+    let shoeBrand = "";
+    let shoeColor = "";
 
+    function myShoe(brand, size, color) {
+        for (let i = 0; i < shoes.length; i++) {
+            if (brand === shoes[brand] && size == shoes[size] && color === shoes[color]) {
+                shoeBrand = brand;
+                shoeSize = size;
+                shoeColor = color;
             }
         }
     }
-
+    function getBrand() {
+        return shoeBrand;
+    }
+    function getSize() {
+        return shoeSize;
+    }
+    function getColour() {
+        return shoeColor;
+    }
     // function getShoe(index) {
     //     shoeObj = shoes.filter(shoe){
 
