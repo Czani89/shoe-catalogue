@@ -45,36 +45,18 @@ function catalogue() {
         }
     ];
     let shoeObj = {};
-    let shoeSize = "";
-    let shoeBrand = "";
-    let shoeColor = "";
+   
 
     function myShoe(brand, size, color) {
         for (let i = 0; i < shoes.length; i++) {
-            if (brand === shoes[brand] && size == shoes[size] && color === shoes[color]) {
-                shoeBrand = brand;
-                shoeSize = size;
-                shoeColor = color;
+            if (brand === shoes[i].brand && size == shoes[i].size && color === shoes[i].color) {
+                shoeObj = shoes[i];
             }
         }
     }
-    function getBrand() {
-        return shoeBrand;
+    function getShoeObj(){
+        return shoeObj
     }
-    function getSize() {
-        return shoeSize;
-    }
-    function getColour() {
-        return shoeColor;
-    }
-    // function getShoe(index) {
-    //     shoeObj = shoes.filter(shoe){
-
-    //     };
-
-    //     console.log(shoeObj);
-    //     return shoeObj;
-    // }
 
     function shoeProp(prop) {
         let shoeProp = shoeObj[prop];
@@ -90,7 +72,8 @@ function catalogue() {
     //     }
     // }
     return {
-        // getShoe,
+        myShoe,
+        getShoeObj,
         shoeProp,
         shoes,
     }

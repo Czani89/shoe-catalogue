@@ -5,24 +5,19 @@ const shoeSize = document.querySelector("#size");
 const shoeColour = document.querySelector("#colour");
 const shoeImage = document.querySelector(".shoe-image");
 const selectButton = document.querySelector(".btn1");
+const addToCartBtn = document.querySelector(".addToCart")
 
 // const shoeTemplate = document.querySelector(".textTemplate").innerHTML;
 // const tempCompile = Handlebars.compile(shoeTemplate);
 
 let catInst = catalogue()
-let index = 0;
 
 selectButton.addEventListener("click", function () {
-    myShoe(shoeBrand.value, shoeSize.value, shoeColour.value)
+    catInst.myShoe(shoeBrand.value, shoeSize.value, shoeColour.value)
+    shoeImage.src = catInst.getShoeObj().img
+    shoeContainer.innerHTML = `We have ${catInst.getShoeObj().in_stock} ${catInst.getShoeObj().color} ${catInst.getShoeObj().brand} in stock`
 })
 
-function myShoe(brands, sizes, colors) {
+addToCartBtn.addEventListener("click", function () {
 
-    for (let i = 0; i < catInst.shoes.length; i++) {
-        if (brands === catInst.shoes[i].brand && sizes == catInst.shoes[i].size && colors === catInst.shoes[i].color) {
-            shoeImage.src = catInst.shoes[i].img
-            shoeContainer.innerHTML = `We have ${catInst.shoes[i].in_stock} ${catInst.shoes[i].color} ${catInst.shoes[i].brand} in stock`
-        }
-    }
-}
-
+})
